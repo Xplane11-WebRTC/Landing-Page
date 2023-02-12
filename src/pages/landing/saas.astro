@@ -19,16 +19,16 @@ const meta = {
     <Header
       {...headerData}
       actions={[
-        {
-          type: "ghost",
-          text: 'Login',
-          href: '#',
-        },
-        {
-          type: "primary",
-          text: 'Sign Up',
-          href: '#',
-        },
+        // {
+        //   type: "ghost",
+        //   text: 'Login',
+        //   href: '#',
+        // },
+        // {
+        //   type: "primary",
+        //   text: 'Sign Up',
+        //   href: '#',
+        // },
       ]}
       isSticky
     />
@@ -37,22 +37,20 @@ const meta = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    callToAction={{ text: 'Source Code', href: 'https://github.com/Xplane11-WebRTC', icon: 'tabler:github' }}
+  
+    image={{ src: import('~/assets/images/mainimage.png'), alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <br />
-      <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS
+      Xplane <br />
+      <span class="text-accent dark:text-white highlight"> Web</span>RTC
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 2.0 +
-        Tailwind CSS.</span
+        <span class="font-semibold">The Xplane WebRTC</span> project takes inspiration from Google Stadia for a streaming based solution for playing video games. But our plan is to build one specifically for flight simulators. </span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> Suitable for Startups,
-      Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>The entire project is Open source.
     </Fragment>
   </Hero2>
 
@@ -62,9 +60,9 @@ const meta = {
     isReversed
     items={[
       {
-        title: 'Per ei quaeque sensibus',
+        title: 'Open',
         description:
-          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+          'We plan to be fully transparent and keep our source code fully open source',
       },
       {
         title: 'Cu imperdiet posidonium sed',
@@ -83,9 +81,9 @@ const meta = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ad vix debet docendi</h3>
-      Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod
-      tacimates.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Objectives</h3>
+      The main aim is to allow players from anywhere even with a potato machine experience playing
+      flight simulators.
     </Fragment>
   </Content>
 
