@@ -49,8 +49,8 @@ export const headerData = {
     //   ],
     // },
     // {
-    //   text: 'Widgets',
-    //   href: '#',
+    //   text: 'Sub projects',
+    //   href: getPermalink('/project'), 
     // },
     // {
     //   text: 'Blog',
@@ -60,7 +60,7 @@ export const headerData = {
   // actions: [
   //   { type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }
   // ],
-};
+}; 
   
 export const footerData = {
   links: [

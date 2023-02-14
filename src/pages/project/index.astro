@@ -4,14 +4,15 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
+import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import { getPermalink, getBlogPermalink, getAsset } from '~/utils/permalinks';
+
 
 import { headerData } from '~/data';
 
 const meta = {
-  title: 'Landing page',
+  title: 'Sub projects',
 };
 ---
 
@@ -37,7 +38,7 @@ const meta = {
 
   <!-- Hero2 Widget ******************* -->
 
-  <Hero2
+  <!-- <Hero2
     callToAction={{ text: 'Source Code', href: 'https://github.com/Xplane11-WebRTC' }}
   
     image={{ src: import('~/assets/images/wallapaper-737-runway.png'), alt: 'Xplane Hero Image' }}
@@ -53,7 +54,14 @@ const meta = {
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>The entire project is Open source.
     </Fragment>
-  </Hero2>
+  </Hero2> -->
+
+  <Hero
+>
+  <Fragment slot="title">
+    Sub projects
+  </Fragment>
+</Hero>
 
   <!-- Content Widget **************** -->
 
@@ -61,64 +69,82 @@ const meta = {
   isReversed
   items={[
     {
-      title: 'Open',
-      description:
-        'We plan to be fully transparent and keep our source code fully open source.',
+      title: 'Prioritising IPV6 over IPV4 address.',
     },
     {
-      title: 'p2p',
-      description:
-        'Our entire infrastructure will be designed to run on a p2p network.',
+      title: 'Preference of using nodes close by.',
     },
     {
-      title: 'Trimming Fat',
-      description:
-        'We are actively researching on building a custom trimmed down kernel for better performance.',
+      title: 'Self learning by traversing through the network.',
+    },
+    {
+      title: 'Lighter version of container orchestration.',
+    },
+    {
+      title: 'Focuses on making users focus on the instructions to execute rather than the virtualization itself ',
     },
   ]}
   image={{
-    src: import('~/assets/images/mainimage.png'),
+    src: import('~/assets/images/p2prc-dark-background.png'),
     alt: 'Colorful Image',
   }}
 >
+
   <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Objectives</h3>
-    The main aim is to allow players from anywhere even with a potato machine experience playing
-    flight simulators.
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">P2PRC</h3>
+    The main aim of this project was to create a custom peer to peer network. The user acting as the client has 
+    total flexibility on how to batch the tasks and the user acting as the server has complete flexibility on tracking 
+    the container’s usages and killing the containers at any point of time.
   </Fragment>
 </Content>
 
+<CallToAction
+callToAction={{
+  text: 'Source Code',
+  href: 'https://github.com/Akilan1999/p2p-rendering-computation',
+}}
+>
+  <Fragment slot="title">
+    More information about p2prc.
+  </Fragment>
+  </CallToAction>
+
   <!-- Content Widget **************** -->
 
-  <!-- <Content
+  <Content
     items={[
       {
-        title: 'Per ei quaeque sensibus',
-        description:
-          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+        title: 'Start screenshare on a remote machine in an automated way.',
       },
       {
-        title: 'Cu imperdiet posidonium sed',
-        description:
-          'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+        title: 'support for Barrier KVM for remote inputs.',
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
-        description:
-          'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+        title: 'Automated way to trigger a binary on Screenshare.',
       },
     ]}
     image={{
-      src: import('~/assets/images/caos.jpg'),
+      src: import('~/assets/images/remotegaming.png'),
       alt: 'Colorful Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ad vix debet docendi</h3>
-      Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod
-      tacimates.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Remote Gameplay</h3>
+      The aim of this project is develop a WebRTC screenshare designed for streaming video games and accepting remote inputs.There will be ansible instructions which can be executed inside into any virtual environment. 
+      This will be a plugin which complements the project P2PRC.
     </Fragment>
-  </Content> -->
+  </Content>
+
+  <CallToAction
+    callToAction={{
+      text: 'Source Code',
+      href: 'https://github.com/Akilan1999/remotegameplay',
+    }}
+  >
+  <Fragment slot="title">
+    More information about Remote Gaming.
+  </Fragment>
+  </CallToAction>
 
   <!-- Content Widget **************** -->
 
@@ -184,10 +210,10 @@ const meta = {
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
+  <!-- <CallToAction
     callToAction={{
       text: 'View projects',
-      href: getPermalink('/project/'),
+      href: 'https://github.com/onwidget/astrowind',
     }}
   >
     <Fragment slot="title">
@@ -195,8 +221,8 @@ const meta = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      We have own style when it comes to bringing things together <br class="hidden md:inline" />Yes we 
-      are reinventing the wheel!
+      We have own style when it comes it building bring things together <br class="hidden md:inline" />Yes we 
+      are reinventing the wheel! :P
     </Fragment>
-  </CallToAction>
+  </CallToAction> -->
 </Layout>
